@@ -2,6 +2,7 @@
 
 namespace System\Models;
 
+use PHPMailer\PHPMailer\PHPMailer;
 use System\Core\Exceptions\SystemError;
 use System\Core\Model;
 use System\Responses\View;
@@ -39,7 +40,8 @@ class Email extends Model
             $this->_mailer->Username   = $options['smtp_username'];
             $this->_mailer->Password   = $options['smtp_password'];
             $this->_mailer->SMTPSecure = $options['smtp_encryption'];
-            $this->_mailer->Port       =  $options['smtp_port'];
+            $this->_mailer->Port       = $options['smtp_port'];
+            $this->_mailer->CharSet    = PHPMailer::CHARSET_UTF8;
         }
 
         // set from email

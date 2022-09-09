@@ -63,7 +63,7 @@ class Mail
      /**
      * @var \PHPMailer\PHPMailer\PHPMailer
      */
-    private $_mailer;
+    protected $_mailer;
  
     public function __construct( $mailer )
     {

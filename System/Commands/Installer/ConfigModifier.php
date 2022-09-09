@@ -14,7 +14,7 @@ class ConfigModifier
     private function _readAllConfigs()
     {
         $config = Config::get("Application");
-        var_dump($config->getAll());exit;
+        // var_dump($config->getAll());exit;
         $data = file_get_contents(ABS_PATH . DS . 'Configs/Application.php');
     }
 }
